@@ -17,7 +17,8 @@ countdown()
 function countdown() {
   if (questionTime == 0) {
     // clearTimeout(timerInterval);
-    return console.log("time's up!");
+    console.log("time's up!");
+    clearInterval(theIntervalInterval)
   } else {
     questionTime--;
     console.log(questionTime)
