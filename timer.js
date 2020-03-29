@@ -1,5 +1,4 @@
 var theTimeTime = 5;
-var theIntervalInterval = setInterval(countdown, 1000)
 var questionTime;
 var timerInterval;
 var startButton = document.getElementById("start");
@@ -10,18 +9,18 @@ var startButton = document.getElementById("start");
 
 function timerTimer(){
 questionTime = theTimeTime
-timerInterval = theIntervalInterval
+timerInterval = setInterval(countdown, 1000)
 countdown()
 }
 
 function countdown() {
   if (questionTime == 0) {
     // clearTimeout(timerInterval);
-    console.log("time's up!");
-    clearInterval(theIntervalInterval)
+    clearInterval(timerInterval)
+    return console.log("time's up!...TYLER!");
   } else {
-    questionTime--;
     console.log(questionTime)
+    questionTime--;
   }
 }
 
